@@ -9,8 +9,10 @@
     <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
     <p>Secret Number range is between <strong><u><em>0 and 100</em></u></strong></p>
     <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
-    <p>Your guess was <strong><%= guess %></strong>.
-      You have made <strong><%= guess_counter %></strong> guess(es).</p>
+    <p>Your guess was <strong><u><%= guess %></u></strong>.</p>
+    <p style="font-size:10px"><font color="silver"><%= if cheat == "true"
+              "The Secret number is #{number}."
+            end %></font></p><!-- YOU MUST HIGHLIGHT THE LINE TO SEE THE CHEAT CODE -->
     <p style="color: firebrick"><%= output %></p>
   </body>
   <form>
