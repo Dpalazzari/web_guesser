@@ -1,6 +1,16 @@
 <html>
   <head></head>
-  <body>
-    <p>"The SECRET NUMBER is <%= number %></p>
+  <body style="background-color:silver">
+    <p style="font-size:26px">Try to guess the Secret Number!</p>
+    <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
+    <p>Secret Number range is between <strong><u><em>0 and 100</em></u></strong></p>
+    <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
+    <p>Your guess was <strong><%= guess %></strong>.
+      You have made <strong><%= guess_counter %></strong> guess(es).</p>
+    <p style="color: firebrick"><%= output %></p>
   </body>
+  <form>
+    <input type='text' name='guess' />
+    <input type='submit' value='Guess!' />
+  </form>
 </html>
