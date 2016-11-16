@@ -3,22 +3,28 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 @@number = rand(0..100)
-@@guess_counter = 0
+
   get '/' do
     guess = params["guess"].to_i
-    output = check_guess(guess)
-    erb :index, :locals => {:number => @@number, :guess => guess, :output => output, :guess_counter => @@guess_counter}
+    cheat = params["cheat"]
+    output = check_guess(guess, cheat)
+    erb :index, :locals => {:number => @@number, :guess => guess, :output => output, :cheat => cheat}
   end
 
-  def check_guess(guess)
+  def check_guess(guess, cheat)
     @@guess_counter += 1
     if guess < @@number
       too_low(guess)
     elsif guess > @@number
       too_high(guess)
     else guess == @@number
+      generate_guess
       "You got the secret number! Guess again to play again."
     end
+  end
+
+  def generate_guess
+    @@number = rand(0..100)
   end
 
   def too_low(guess)
