@@ -4,15 +4,16 @@
     <a href="https://github.com/Dpalazzari/web_guesser">
       <img src="http://www.funbrain.com/guess/magic.gif" />
     </a>
-    <p style="font-size: 8px"><strong>Click picture for code source.</strong></p>
+    <p style="font-size: 8px"><strong>Click picture for Github source.</strong></p>
     <p style="font-size:26px">Try to guess the <strong>Secret</strong> Number!</p>
     <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
     <p>Secret Number range is between <strong><u><em>0 and 100</em></u></strong></p>
     <p><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></p>
     <p>Your guess was <strong><u><%= guess %></u></strong>.</p>
-    <p style="font-size:10px"><font color="silver"><%= if cheat == "true"
-              "The Secret number is #{number}."
-            end %></font></p><!-- YOU MUST HIGHLIGHT THE LINE TO SEE THE CHEAT CODE -->
+    <p style="font-size:10px"><font color="silver">
+      <%= if cheat == "true"
+          "The Secret number is #{number}."
+      end %></font></p><!-- YOU MUST HIGHLIGHT THE LINE TO SEE THE CHEAT CODE -->
     <p style="color: firebrick"><%= output %></p>
   </body>
   <form>
